@@ -14,7 +14,8 @@ export default class AutoComplete extends Component {
     this.state = {
       searchText: '',
       dataRange: dataSet,
-      showAutoCompleDiv: true
+      showAutoCompleDiv: true,
+      hoverIndex: ''
     }
   }
 
@@ -65,9 +66,10 @@ export default class AutoComplete extends Component {
   }
 
   renderOption() {
-    return this.state.dataRange.map(ele => {
+    return this.state.dataRange.map((ele, idx) => {
       return (
         <option
+        key={idx}
         value={ele}
         />
       );

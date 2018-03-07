@@ -1,0 +1,35 @@
+.container {
+  /*justify-content: center;*/
+  /*flex-wrap: wrap;*/
+  /*display: flex;*/
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  /*margin: 0 auto;*/
+  /*background-color: #ccc;*/
+}
+
+.auto-complete-div {
+  /*display: flex;
+  justify-content: center;*/
+  margin: 0 auto;
+  background-color: #ccc;
+  border: 1px solid #fe3213;
+  width: 170px;
+  /*margin: 0 auto;*/
+  /*align-items: center;*/
+}
+
+li {
+  list-style: none;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: show;
+}

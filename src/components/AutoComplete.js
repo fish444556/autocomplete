@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import './AutoComplete.css';
 
-
-
 const dataSet = [
   'apple',
   'banana',
@@ -57,7 +55,7 @@ export default class AutoComplete extends Component {
       return (
         <li
         key={idx}
-        onClick={(e) => this.handleClick(e)}        
+        onClick={(e) => this.handleClick(e)}
         >
         <p>{ele}</p>
         </li>
@@ -66,10 +64,24 @@ export default class AutoComplete extends Component {
     );
   }
 
+  renderOption() {
+    return this.state.dataRange.map(ele => {
+      return (
+        <option
+        value={ele}
+        />
+      );
+    })
+  }
+
   render() {
     return (
       <div className='container'>
-        <div className='input-box'>
+        <input list="browsers" name="browser" />
+        <datalist id = "browsers">
+          {this.renderOption()}
+        </datalist>
+          <div className='input-box'>
         <input
       type='text'
       value={this.state.searchText}
